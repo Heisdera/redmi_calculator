@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', Sans-Serif;
+  margin: 20px auto;
+  background: #ddd;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+  height: 80px;
+  padding: 15px;
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px #eee solid;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  pointer-events: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px 30px;
+}
+
+.buttons button {
+  padding: 25px 18px;
+  border-radius: 50%;
+  border: none;
+  background: #eee;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.buttons button:active {
+  transform: scale(1.05);
+}
+
+.buttons button:hover {
+  background: #ddd;
+}
+
+.operator {
+  color: #ff8800;
+}
+
+.operator:last-of-type {
+  color: #fff;
+  background: #ff9800;
+}
+
+.operator:last-of-type:hover {
+  background: #ff8800;
+}
+
+@media screen and (max-width: 460px) {
+  .container {
+    max-width: 330px;
+  }
+
+  .display {
+    height: 70px;
+    padding: 15px;
+    font-size: 28px;
+  }
+
+  .buttons {
+    grid-gap: 10px 16px;
+  }
+
+  .buttons button {
+    font-size: 18px;
+    padding: 18px 12px;
+  }
+}
